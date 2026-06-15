@@ -1,0 +1,6 @@
+{
+  "name": "Yunjizhou AI Lab",
+  "description": "云极洲专注于集成大模型、物联网与机器视觉，提供面向政企的智能系统方案。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
