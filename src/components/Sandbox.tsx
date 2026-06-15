@@ -347,7 +347,7 @@ export default function Sandbox() {
           >
             <Bot className={`w-5 h-5 shrink-0 transition-colors ${activeTab === 'rag' ? 'text-slate-950' : 'text-[#00F5A0]'}`} />
             <div>
-              <div className="text-sm font-bold">{language === "zh" ? "服务保密单位智能问答RAG系统" : "Confidential Unit RAG AI"}</div>
+              <div className="text-sm font-bold">{language === "zh" ? "保密单位智能问答RAG系统" : "Confidential Unit RAG AI"}</div>
               <div className="text-[10px] font-mono opacity-70">
                 {language === "zh" ? "私有知识管理 · 混合重排" : "Private Knowledge · Reranker"}
               </div>
