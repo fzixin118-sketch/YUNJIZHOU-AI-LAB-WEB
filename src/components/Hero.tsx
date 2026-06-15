@@ -25,8 +25,8 @@ export default function Hero() {
     if (!searchQuery.trim()) return;
 
     const feedback = language === "zh" 
-      ? `正在为您检索“${searchQuery}”相关的核心工作流模块...`
-      : `Searching for core modules related to "${searchQuery}"...`;
+      ? `正在为您查找“${searchQuery}”相关方案...`
+      : `Finding practical solutions related to "${searchQuery}"...`;
 
     setSearchStatus(feedback);
     setTimeout(() => {
@@ -38,8 +38,8 @@ export default function Hero() {
   const handleTagClick = (tag: string) => {
     setSearchQuery(tag);
     const feedback = language === "zh"
-      ? `已选择“${tag}”，正在为您导向智能演示沙箱...`
-      : `Selected "${tag}", redirecting you to the live sandbox...`;
+      ? `已选择“${tag}”，正在打开对应演示...`
+      : `Selected "${tag}", opening the demo area...`;
 
     setSearchStatus(feedback);
     setTimeout(() => {
@@ -64,8 +64,8 @@ export default function Hero() {
           <span className="w-1.5 h-1.5 rounded-full bg-[#00F5A0] animate-ping" />
           <span className="text-xs font-mono tracking-wider">
             {language === "zh" 
-              ? "YUNJIZHOU AI • 携手保密单位与政产园的智能化转型设计器"
-              : "YUNJIZHOU AI • Custom Transformation Designer for Confidential Units & Parks"}
+              ? "YUNJIZHOU AI • 面向政企与园区的 AI 应用落地伙伴"
+              : "YUNJIZHOU AI • Practical AI Partner for Organizations & Parks"}
           </span>
         </motion.div>
 
@@ -104,15 +104,15 @@ export default function Hero() {
         >
           {language === "zh" ? (
             <>
-              云极洲致力于将先进大模型与多维视觉深植于真实产业场景。
+              云极洲为政企、园区和高安全场景定制可落地的 AI 系统。
               <br className="hidden sm:block" />
-              为您提供集私有知识库、智能视频分析与 AI+IBMS 智能楼宇控制安防联动指挥于一体的数智方案。
+              从内部资料智能问答、视频异常提醒，到楼宇能耗优化与安防联动，我们帮助客户把技术变成看得见的效率。
             </>
           ) : (
             <>
-              Yunjizhou focuses on deeply rooting bleeding-edge algorithms into onsite operations.
+              Yunjizhou builds practical AI systems for organizations, parks, and secure environments.
               <br className="hidden sm:block" />
-              Co-engineered by leading research scientists and veteran integration experts for real results.
+              We turn private knowledge search, video alerts, and building controls into measurable operational gains.
             </>
           )}
         </motion.p>
@@ -135,14 +135,14 @@ export default function Hero() {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder={language === "zh" ? "搜索感兴趣的板块：自研RAG、视频AI、IBMS安防联动..." : "Search: Custom RAG, Vision AI, IBMS Dispatch..."}
+              placeholder={language === "zh" ? "搜索您关心的问题：资料查询、视频巡检、楼宇节能..." : "Search: document search, video alerts, building energy saving..."}
               className="w-full pl-3 pr-4 py-3.5 bg-transparent border-0 outline-none text-slate-800 dark:text-slate-100 text-sm font-sans placeholder:text-gray-400/85"
             />
             <button
               type="submit"
               className="px-6 sm:px-8 py-3 bg-gradient-to-r from-[#00F5A0] to-[#00B2FE] text-slate-950 font-sans text-xs font-extrabold rounded-full tracking-wide transition-all shadow-md shadow-cyan-500/10 cursor-pointer hover:scale-103 hover:shadow-[0_0_15px_rgba(0,245,160,0.4)] active:scale-97 shrink-0 flex items-center gap-1.5"
             >
-              <span>{language === "zh" ? "立即定制建议" : "Get Instant Advice"}</span>
+              <span>{language === "zh" ? "查看建议" : "View Advice"}</span>
               <Sparkles className="w-3.5 h-3.5 text-slate-950" />
             </button>
           </form>
@@ -150,23 +150,23 @@ export default function Hero() {
           {/* Search suggestions / chips with high-vitality hover */}
           <div className="mt-4 flex flex-wrap justify-center items-center gap-2 text-xs text-gray-500">
             <span className="font-semibold text-gray-400 dark:text-gray-500">
-              {language === "zh" ? "热门板块探索:" : "Popular Tags:"}
+              {language === "zh" ? "常见需求:" : "Common Needs:"}
             </span>
             {[
               {
-                text: language === "zh" ? "自研RAG系统" : "Custom RAG System",
+                text: language === "zh" ? "内部资料问答" : "Internal Knowledge Q&A",
                 color: "hover:bg-[#00F5A0]/8 hover:text-[#00F5A0] hover:border-[#00F5A0]"
               },
               {
-                text: language === "zh" ? "智能视频分析" : "Intelligent Vision",
+                text: language === "zh" ? "视频异常提醒" : "Video Alerting",
                 color: "hover:bg-[#00B2FE]/8 hover:text-[#00B2FE] hover:border-[#00B2FE]"
               },
               {
-                text: language === "zh" ? "AI+IBMS安防联动" : "AI+IBMS Security Linkage",
+                text: language === "zh" ? "楼宇节能与安防" : "Energy & Security",
                 color: "hover:bg-[#10B981]/8 hover:text-[#10B981] hover:border-[#10B981]"
               },
               {
-                text: language === "zh" ? "大模型本地部署" : "Local Deployment",
+                text: language === "zh" ? "本地私有部署" : "Private Deployment",
                 color: "hover:bg-purple-500/8 hover:text-purple-400 hover:border-purple-400"
               }
             ].map((tag, idx) => (
@@ -203,8 +203,8 @@ export default function Hero() {
           <div className="text-center mb-8">
             <span className="px-3.5 py-1 rounded bg-gray-100/90 dark:bg-slate-900 text-[10px] font-mono text-gray-550 dark:text-slate-400 font-bold uppercase tracking-widest border border-gray-200/50 dark:border-white/5">
               {language === "zh" 
-                ? "三大核心落地业务生态 • 场景实打" 
-                : "3 Core Production Ecosystems • Deployment Field-Tested"}
+                ? "三类高频客户场景 • 可演示可落地" 
+                : "3 Common Client Scenarios • Demo-Ready"}
             </span>
           </div>
 
@@ -219,21 +219,21 @@ export default function Hero() {
                   <Bot className="w-6 h-6 text-[#00E5A3]" />
                 </div>
                 <h3 className="font-sans font-bold text-slate-800 dark:text-white text-base tracking-wide flex items-center justify-between">
-                  <span>{language === "zh" ? "保密单位落地 • 自研RAG" : "Confidential Unit • Custom RAG"}</span>
+                  <span>{language === "zh" ? "内部资料智能问答" : "Private Knowledge Q&A"}</span>
                   <ArrowRight className="w-3.5 h-3.5 text-gray-300 dark:text-slate-600 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                 </h3>
                 <p className="mt-3 text-xs text-gray-500 dark:text-slate-400 leading-relaxed font-normal">
                   {language === "zh"
-                    ? "针对大型保密单位、军民融合非结构化知识、私有合规业务手册做深度安全训练理解，置信匹配度达99.2%，完全支持高度脱网和物理隔离部署。"
-                    : "Deeply trained on unstructured knowledge bases & safety leaflets for confidential service units. Achieves 99.2% accuracy fully offline under physical isolation."}
+                    ? "把制度、手册、合同和历史材料接入本地知识库，让员工用自然语言提问，快速得到可追溯的答案。支持私有化、离线部署，并可使用 RAG 做来源校验。"
+                    : "Connect manuals, contracts, and historical files into a private knowledge base so teams can ask questions and get traceable answers, with RAG-based source checks."}
                 </p>
               </div>
               <div className="mt-5 pt-3 border-t border-gray-50 dark:border-white/5 flex items-center justify-between">
                 <span className="text-[10px] font-mono text-slate-400">
-                  {language === "zh" ? "DEPLOYED: 集团审计科" : "DEPLOYED: Corp Audit Dept"}
+                  {language === "zh" ? "适用：审计 / 合规 / 内控制度" : "For: Audit / Compliance / Policies"}
                 </span>
                 <span className="text-[10px] font-sans font-bold text-[#00E5A3] bg-[#00F5A0]/10 dark:bg-[#00F5A0]/20 px-2 py-0.5 rounded">
-                  {language === "zh" ? "免幻觉质检" : "Hallucination Free"}
+                  {language === "zh" ? "答案可追溯" : "Traceable Answers"}
                 </span>
               </div>
             </div>
@@ -248,21 +248,21 @@ export default function Hero() {
                   <Shield className="w-6 h-6 text-[#1890ff]" />
                 </div>
                 <h3 className="font-sans font-bold text-slate-800 dark:text-white text-base tracking-wide flex items-center justify-between">
-                  <span>{language === "zh" ? "公安实战 • 智能视频分析" : "Police Operations • Vision AI"}</span>
+                  <span>{language === "zh" ? "重点区域视频巡检" : "Video Safety Monitoring"}</span>
                   <ArrowRight className="w-3.5 h-3.5 text-gray-300 dark:text-slate-600 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                 </h3>
                 <p className="mt-3 text-xs text-gray-500 dark:text-slate-400 leading-relaxed font-normal">
                   {language === "zh"
-                    ? "搭载边缘轻量实时视觉感知模型，支持跨区域多源RTSP，高精度抓铺异常行为及多警协同反应。"
-                    : "Lightweight edge inference engines processing multi-source RTSP over borders. Real-time anomalous behavior detection & dispatching."}
+                    ? "接入现有摄像头，对徘徊、跌倒、越界、聚集等异常情况自动提醒，减少人工长时间盯屏压力。需要时可在边缘设备上处理 RTSP 视频流。"
+                    : "Connect existing cameras to flag loitering, falls, boundary crossing, and crowding, reducing manual screen watching. RTSP streams can be processed on edge devices."}
                 </p>
               </div>
               <div className="mt-5 pt-3 border-t border-gray-50 dark:border-white/5 flex items-center justify-between">
                 <span className="text-[10px] font-mono text-slate-400">
-                  {language === "zh" ? "DEPLOYED: 三重治安岗" : "DEPLOYED: Station Security"}
+                  {language === "zh" ? "适用：园区 / 工厂 / 重点区域" : "For: Parks / Plants / Key Areas"}
                 </span>
                 <span className="text-[10px] font-sans font-bold text-[#1890ff] bg-blue-50/50 dark:bg-blue-950/40 px-2 py-0.5 rounded">
-                  {language === "zh" ? "毫秒级反应" : "Sub-second Alert"}
+                  {language === "zh" ? "实时提醒" : "Live Alerts"}
                 </span>
               </div>
             </div>
@@ -277,21 +277,21 @@ export default function Hero() {
                   <Building className="w-6 h-6 text-amber-500" />
                 </div>
                 <h3 className="font-sans font-bold text-slate-800 dark:text-white text-base tracking-wide flex items-center justify-between">
-                  <span>{language === "zh" ? "商业园区 • AI+IBMS能效安防联动" : "Campus • AI+IBMS & Security Linkage"}</span>
+                  <span>{language === "zh" ? "楼宇节能与安防联动" : "Building Energy & Security"}</span>
                   <ArrowRight className="w-3.5 h-3.5 text-gray-300 dark:text-slate-600 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                 </h3>
                 <p className="mt-3 text-xs text-gray-500 dark:text-slate-400 leading-relaxed font-normal">
                   {language === "zh"
-                    ? "能效自调节算法无缝耦合多维安防体系。任一传感器、高清热成像和周界围网触警时，物理层卷帘瞬间下锁封阻，调引应急逃生牌并实时指挥安保终端。"
-                    : "Thermodynamic HVAC optimization coupled with smart video analytics. Triggers automatic building overrides (ventilation shutdown, automatic turnstile lockdowns, and dynamic route dispatch) upon detecting security threats."}
+                    ? "根据人流、天气和设备状态自动优化空调运行，降低能耗；遇到火情、入侵等风险时，可联动 IBMS、门禁、电梯、广播等系统统一响应。"
+                    : "Optimize HVAC based on occupancy, weather, and equipment status. During incidents, link IBMS, access control, elevators, and broadcasts for coordinated response."}
                 </p>
               </div>
               <div className="mt-5 pt-3 border-t border-gray-50 dark:border-white/5 flex items-center justify-between">
                 <span className="text-[10px] font-mono text-slate-400">
-                  {language === "zh" ? "DEPLOYED: 综合智慧调度厅" : "DEPLOYED: Unified Command Center"}
+                  {language === "zh" ? "适用：写字楼 / 园区 / 综合体" : "For: Offices / Parks / Campuses"}
                 </span>
                 <span className="text-[10px] font-sans font-bold text-amber-600 bg-amber-50/50 dark:bg-amber-950/40 px-2 py-0.5 rounded">
-                  {language === "zh" ? "立体安防闭环" : "Security & Energy Dispatch"}
+                  {language === "zh" ? "节能联动" : "Energy Linkage"}
                 </span>
               </div>
             </div>

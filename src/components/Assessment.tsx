@@ -12,11 +12,11 @@ import {
 import { useApp } from "../context/AppContext";
 import { ROIProposalResult } from "../types";
 
-/// Deterministic McKinsey-style blueprint database
+/// Deterministic blueprint database for the interactive assessment demo
 const BLUEPRINTS_ZH: Record<string, ROIProposalResult> = {
   "state-owned-docs": {
-    title: "服务保密单位与高安全性规章语义 RAG 与知识闭环方案 (Confidential Unit Private Document Multi-Source Semantic Hybrid RAG Solutions)",
-    overview: "针对大型高合规、涉密或安全性要求高的服务保密单位多源孤立文档及规章审计复杂的诉求，云极洲提供自研双路融合（Dense-Sparse Hybrid Retrieval）机密级 RAG 解决方案，支持完全物理隔离、涉密专用局域网等私有本地高安全部署。 (Engineered specifically for confidential units dealing with isolated repositories and intricate classification parameters. Offers fully offline high-security air-gapped sovereign cloud deployment.)",
+    title: "内部资料智能问答与私有知识库方案 (Private Knowledge Q&A with RAG)",
+    overview: "适合制度、合同、审计材料和业务手册较多的单位。云极洲可将分散资料整理为私有知识库，让员工用自然语言提问，并通过 RAG、来源引用和权限控制提高答案可靠性。支持本地服务器、内网或离线部署。",
     estimatedSaving: "38.5 万 / 年 (Est. ¥385k/Yr Saved)",
     productivityGain: "平均提效 72.0% (Avg. Speed +72.0%)",
     modules: [
@@ -36,10 +36,10 @@ const BLUEPRINTS_ZH: Record<string, ROIProposalResult> = {
     ]
   },
   "gov-video": {
-    title: "政法公安实战：边缘端多视角智能解析与违规布防方案 (Enterprise Edge Analytics & Intelligent Surveillance)",
-    overview: "为政法公安与高风险监控重地提供自研的极速检测跟踪框架（Vision Analytics Kernel）。利用边缘端微处理器完成百路网络实时低迟解码，支持违规人员入侵判定、聚集群众预警、安防危险反制等复杂实战需要。 (Supplies municipal safety and high-stakes facilities with Yunjizhou's Vision Analytics Kernel. Decodes RTSP feeds locally to detect border violations or distress without bandwidth overheads.)",
+    title: "重点区域视频巡检与异常提醒方案 (Edge Video Monitoring & Alerts)",
+    overview: "适合园区、厂区、重点通道和高风险作业现场。系统接入现有摄像头后，可对越界、徘徊、跌倒、聚集等情况进行自动识别和提醒；对网络或安全要求高的场景，可采用边缘设备本地处理 RTSP 视频流。",
     estimatedSaving: "55.0 万 / 年 (Est. ¥550k/Yr Saved)",
-    productivityGain: "反应耗时缩短至毫秒级 (Under 100ms)",
+    productivityGain: "异常提醒更及时 (Near Real-Time Alerts)",
     modules: [
       { name: "多维空间实时标定引擎 (Spatial Tagging Model)", desc: "全帧率解构视频，提供目标、距离与轨迹跟踪预测，避免误报。 (Full framerate deconstructs, tracking targets, distance vectors, and movement paths.)", iconName: "Eye" },
       { name: "边缘算力多路解码分配 (Edge-node multiplex decoder)", desc: "仅需低成本服务器即可稳定对齐三十路高清晰摄像头，省去巨额带宽成本。 (Aligns RTSP streams on cost-effective edge chips, bypassing expensive server leasing.)", iconName: "Layers" },
@@ -47,7 +47,7 @@ const BLUEPRINTS_ZH: Record<string, ROIProposalResult> = {
     ],
     timeline: [
       { phase: "第 1 阶段 / Phase 1", title: "高清视频源接入及边缘网关调试 (RTSP Feed Hooks & Edge Tuning)", duration: "1 - 2 个月 (Months)", details: "定位重地监视死角，将多视角高清 RTSP 流稳定总线桥接至专有边缘处理器，标定物理空间边界。 (Audit camera blind-spots and direct feed buses onto local edge inference chips.)" },
-      { phase: "第 2 阶段 / Phase 2", title: "多目标安全检测模型训练适配 (Tracking Parameter Alignment)", duration: "3 - 4 个月 (Months)", details: "训练极速目标检测与多轨迹跟踪融合算法（越线、聚众、高坠），多轮迭代回归并降低环境误报。 (Define target detection parameters like border crossing to minimize false positives.)" },
+      { phase: "第 2 阶段 / Phase 2", title: "多目标安全检测模型训练适配 (Tracking Parameter Alignment)", duration: "3 - 4 个月 (Months)", details: "训练目标检测与多轨迹跟踪算法（越线、聚众、高坠等），多轮迭代降低误报。 (Define target detection parameters like border crossing to minimize false positives.)" },
       { phase: "第 3 阶段 / Phase 3", title: "专网告警联防集成与业务交割 (Dispatch Systems Integration)", duration: "5 - 6 个月 (Months)", details: "深层联通警员调度终端、本地应急广播，建立毫秒级响应应急闭环，通过实战检验正式平滑交割。 (Integrate sirens and security communication networks, finalizing full-scale drills.)" }
     ],
     architectureDiagram: [
@@ -57,10 +57,10 @@ const BLUEPRINTS_ZH: Record<string, ROIProposalResult> = {
     ]
   },
   "park-ibms": {
-    title: "商业园区 AI+IBMS 智能楼控与安防联动指挥一体化方案 (Integrated Smart Chiller & Security Linkage Dispatch Solution)",
-    overview: "将人工智能多变量能效预测回归算法与周界立体安防报警体系深度融合，直通物业 IBMS 管理总线。在实现大楼暖通空调动态寻优自适应节能的同时，当公安/视频 AI 检出入侵、火情或安全风险时，自动毫秒级跨系统反控冷热源、新风、风雨、梯控、电子导引牌等物理端点，开启一键协同应急指挥调度。 (Integrates multi-variable thermodynamic models with campus perimeter surveillance. Intercepts traditional IBMS buses to dynamically cut HVAC power bills by 28.5%, while instantly feedback-modulating escape maps, gate barriers, and ventilation systems upon critical safety events.)",
+    title: "楼宇节能与 AI+IBMS 联动方案 (Building Energy & AI+IBMS Linkage)",
+    overview: "适合商业园区、写字楼、综合体和工业厂房。系统根据人流、天气和设备状态优化空调运行，帮助降低能耗；同时可接入 IBMS、门禁、电梯、广播和导引屏，在火警、入侵等事件中形成联动响应。",
     estimatedSaving: "35.8 万 / 年 (Est. ¥358k/Yr Saved)",
-    productivityGain: "联动响应缩短至毫秒级 (Active Dispatch <200ms)",
+    productivityGain: "联动响应更顺畅 (Faster Coordinated Response)",
     modules: [
       { name: "应急联合安防调度中枢 (Unified Security Dispatch Kernel)", desc: "联合视频 AI 安全打标结果、常闭防火门状态、周界雷达，秒级智能下发警情地图并锁定入侵通道。 (Coordinating surveillance alerts, fire door status, and radar tracks to lock down corridors or route responders.)", iconName: "Shield" },
       { name: "IBMS-PLC 闭环反控总线 (IBMS-PLC Bidirectional Sync)", desc: "免去全套重构，直接接管传统西门子/霍尼韦尔系统，支持紧急防烟新风强切与通道电耦合锁定。 (Bypasses total hardware teardown, intercepting legacy PLC buses to regulate cycles.)", iconName: "Cpu" },
@@ -78,8 +78,8 @@ const BLUEPRINTS_ZH: Record<string, ROIProposalResult> = {
     ]
   },
   "default-solution": {
-    title: "云极洲企业智能化工作流定制专属蓝图 (Yunjizhou Custom Digital AI Transformation Roadmap)",
-    overview: "专为渴望进行数字化 AI 转型的企业提供轻量高能的“小步快跑”式转型方案。将大模型语义处理 and 自研行业小算法融合到日常流程体系中，以最小投资换取关键业务岗位的生产红利。 (Designed for small-to-medium firms seeking rapid, iterative productivity loops, marrying small local language models with specific vision scripts into current setups.)",
+    title: "企业流程自动化与 AI 工作台方案 (AI Workflow Automation Roadmap)",
+    overview: "适合希望从小场景开始试点的企业。云极洲会优先选择资料整理、审批流转、报表核对、客服辅助等高频环节，用轻量 AI 工具先跑通价值，再逐步扩展到更多部门。",
     estimatedSaving: "15.0 万 / 年 (Est. ¥150k/Yr Saved)",
     productivityGain: "平均人效提升 45.0% (Avg. Capacity +45.0%)",
     modules: [
@@ -200,7 +200,7 @@ export default function Assessment() {
     setIsGenerating(true);
     setResult(null);
 
-    // Simulate McKinsey Consulting report construction delay
+    // Simulate assessment report construction delay
     setTimeout(() => {
       let key = "default-solution";
       if (industry === "docs" || problem === "manual") {
@@ -246,8 +246,8 @@ export default function Assessment() {
               </p>
               <p className="text-emerald-700 dark:text-emerald-400 mt-0.5">
                 {language === "zh"
-                  ? "评估草图与规划文件已储存在本地。我们系统的架构专家与研发顾问组将在会谈时为您展示更丰富的物理设备解构与系统联动拓扑。"
-                  : "Draft blueprints have been structured locally. Our systems development and safety advisory group will demonstrate live deep hardware & software topologies."}
+                  ? "评估草图已准备好。正式沟通时，我们会结合您的现场情况进一步拆解部署方式、预算边界和实施步骤。"
+                  : "The evaluation draft is ready. In a formal discussion, we can refine deployment options, budget ranges, and rollout steps for your site."}
               </p>
             </div>
             <button 
@@ -265,12 +265,12 @@ export default function Assessment() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-[11px] font-mono font-extrabold tracking-widest text-[#1890ff] uppercase bg-blue-50 dark:bg-blue-950/30 px-2.5 py-1 rounded-md border border-blue-100 dark:border-blue-900/40">
-            {language === "zh" ? "AI Blueprint Planner / 转型与评估枢纽" : "AI Blueprint Planner / Evaluation Hub"}
+            {language === "zh" ? "AI Scenario Planner / 场景初评" : "AI Scenario Planner"}
           </span>
           <h2 className="mt-5 text-3xl sm:text-4xl font-sans font-extrabold tracking-tight text-slate-900 dark:text-white">
             {language === "zh" 
-              ? "仅用 15 秒，自动精算您的企业数字化转型报告" 
-              : "Generate Your Corporate Digitization Report in 15 Seconds"}
+              ? "快速判断：您的场景适合怎样做 AI" 
+              : "Quickly See What AI Could Do for Your Scenario"}
           </h2>
           <p className="mt-4 text-sm text-slate-600 dark:text-slate-305 font-normal leading-relaxed">
             {language === "zh"
@@ -288,14 +288,14 @@ export default function Assessment() {
               <div className="flex items-center gap-2 mb-6">
                 <Sparkles className="w-5 h-5 text-[#00E5A3]" />
                 <span className="text-sm font-extrabold text-[#1f2329] dark:text-white">
-                  {language === "zh" ? "业务及痛点特征配置台" : "Workflows & Issue Configurer"}
+                  {language === "zh" ? "业务场景选择" : "Scenario Selector"}
                 </span>
               </div>
 
               {/* Input 1: Sector / Industry */}
               <div className="mb-6">
                 <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2.5">
-                  {language === "zh" ? "1. 企业类型或核心场景" : "1. Enterprise Sector & Main Scenario"}
+                  {language === "zh" ? "1. 企业类型或主要场景" : "1. Organization Type or Main Scenario"}
                 </label>
                 <div className="grid grid-cols-2 gap-3">
                   <button
@@ -307,7 +307,7 @@ export default function Assessment() {
                     }`}
                   >
                     <Building className="w-4 h-4 text-slate-400" />
-                    <span>{language === "zh" ? "服务保密单位 / 专属制度" : "Confidential Unit / Compliance"}</span>
+                    <span>{language === "zh" ? "政企单位 / 内部制度" : "Public Sector / Internal Policies"}</span>
                   </button>
                   <button
                     onClick={() => setIndustry("police")}
@@ -318,7 +318,7 @@ export default function Assessment() {
                     }`}
                   >
                     <Shield className="w-4 h-4 text-slate-400" />
-                    <span>{language === "zh" ? "政法公安 / 工业报警" : "Police / Heavy Works"}</span>
+                    <span>{language === "zh" ? "安防巡检 / 工业现场" : "Security / Industrial Site"}</span>
                   </button>
                   <button
                     onClick={() => setIndustry("park")}
@@ -329,7 +329,7 @@ export default function Assessment() {
                     }`}
                   >
                     <Activity className="w-4 h-4 text-slate-400" />
-                    <span>{language === "zh" ? "商业园区 / 工业智控" : "Campus / Smart HVAC"}</span>
+                    <span>{language === "zh" ? "商业园区 / 楼宇能耗" : "Campus / Building Energy"}</span>
                   </button>
                   <button
                     onClick={() => setIndustry("other")}
@@ -340,7 +340,7 @@ export default function Assessment() {
                     }`}
                   >
                     <Users className="w-4 h-4 text-slate-400" />
-                    <span>{language === "zh" ? "商业私企 / 流程服务" : "SMBs / Process Service"}</span>
+                    <span>{language === "zh" ? "企业流程 / 客服运营" : "Business Process / Operations"}</span>
                   </button>
                 </div>
               </div>
@@ -348,7 +348,7 @@ export default function Assessment() {
               {/* Input 2: Core Bottleneck */}
               <div className="mb-6">
                 <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2.5">
-                  {language === "zh" ? "2. 阻碍当前生产力的核心瓶颈" : "2. Primary Operational Bottleneck"}
+                  {language === "zh" ? "2. 当前最想解决的问题" : "2. Main Problem to Solve"}
                 </label>
                 <select
                   value={problem}
@@ -357,17 +357,17 @@ export default function Assessment() {
                 >
                   {language === "zh" ? (
                     <>
-                      <option value="manual">公文/审计/合规规章庞杂，检索困难效率低</option>
-                      <option value="security">高危重工周界需要人肉盯防，漏哨存在重大隐患</option>
-                      <option value="energy">商业楼宇或库房空调能耗、HVAC电费开支巨大</option>
-                      <option value="workflow">审批流转繁琐割裂，跨系统数据孤立人肉搬运</option>
+                      <option value="manual">资料、制度、合同太多，人工查找效率低</option>
+                      <option value="security">视频巡检依赖人工，异常情况容易遗漏</option>
+                      <option value="energy">楼宇空调和设备能耗高，希望降低运行成本</option>
+                      <option value="workflow">审批和数据流转割裂，重复录入较多</option>
                     </>
                   ) : (
                     <>
-                      <option value="manual">Complex regulatory manuals, making manual audits extremely slow</option>
-                      <option value="security">Heavy industrial borders require manual patrol, risking blind spots</option>
-                      <option value="energy">Enormous power expenditures on building cooling & HVAC relays</option>
-                      <option value="workflow">Fragmented approval chains requiring repetitive data transits</option>
+                      <option value="manual">Too many documents, policies, or contracts to search manually</option>
+                      <option value="security">Manual video monitoring creates missed-alert risk</option>
+                      <option value="energy">High HVAC and equipment energy cost</option>
+                      <option value="workflow">Fragmented approvals and repetitive data entry</option>
                     </>
                   )}
                 </select>
@@ -377,7 +377,7 @@ export default function Assessment() {
               <div className="mb-6">
                 <div className="flex justify-between items-center mb-2.5">
                   <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                    {language === "zh" ? "3. 影响部门/员工规模估算" : "3. Estimated Department Size Affected"}
+                    {language === "zh" ? "3. 可能影响的人员规模" : "3. Approximate Team Size Affected"}
                   </label>
                   <span className="text-xs font-mono font-bold text-[#1890ff] bg-blue-50 dark:bg-blue-950/40 px-2.5 py-0.5 rounded border border-blue-150 dark:border-blue-900/30">
                     {teamSize === 500 
@@ -414,8 +414,8 @@ export default function Assessment() {
                     <Printer className="w-4 h-4 animate-spin text-slate-950" />
                     <span>
                       {language === "zh" 
-                        ? "系统正在组装AI专家方案并预算ROI..." 
-                        : "Compiling Expert Formulas & Calibrating ROI..."}
+                        ? "正在生成初步建议..." 
+                        : "Generating Initial Recommendation..."}
                     </span>
                   </>
                 ) : (
@@ -423,8 +423,8 @@ export default function Assessment() {
                     <BarChart3 className="w-4 h-4 text-slate-950" />
                     <span>
                       {language === "zh" 
-                        ? "免费生成数字化 AI 转型架构蓝图报告" 
-                        : "Generate My Customized AI Blueprint Report"}
+                        ? "生成初步方案建议" 
+                        : "Generate Initial AI Recommendation"}
                     </span>
                   </>
                 )}
@@ -450,12 +450,12 @@ export default function Assessment() {
                     📊
                   </div>
                   <h3 className="font-sans font-extrabold text-slate-800 dark:text-slate-100 text-base">
-                    {language === "zh" ? "报告预览控制台" : "Report Generation Dashboard"}
+                    {language === "zh" ? "方案预览区" : "Recommendation Preview"}
                   </h3>
                   <p className="mt-3 text-xs text-slate-500 dark:text-slate-400 max-w-sm font-normal leading-relaxed font-sans">
                     {language === "zh"
-                      ? "在左侧面板配置您的业务场景与痛点诉求，点击“免费生成数字化 AI 转型架构蓝图报告”按钮，系统AI大脑将立即为您在线精算排布。"
-                      : "Configure your parameters in the left configurer panel. Click 'Generate' to run our data-model regression and output McKinsey-style blueprints."}
+                      ? "在左侧选择您的场景、问题和人员规模，点击生成后即可看到一份初步方向，方便后续沟通。"
+                      : "Select your scenario, problem, and team size to see an initial direction for the next discussion."}
                   </p>
                 </motion.div>
               )}
@@ -475,7 +475,7 @@ export default function Assessment() {
                   </div>
                   <div className="space-y-1.5 text-center font-mono text-[10px] text-slate-400 dark:text-slate-500 leading-relaxed font-semibold">
                     <p className="text-slate-850 dark:text-slate-200 text-xs font-extrabold font-sans mb-1">
-                      {language === "zh" ? "正在进行场景契合度数据流校准..." : "Calibrating Segment-Bottleneck Compatibility..."}
+                      {language === "zh" ? "正在匹配相似交付场景..." : "Matching Similar Delivery Scenarios..."}
                     </p>
                     <p>ANALYZING SEGMENT BOTTLENECK FREQUENCY &gt;</p>
                     <p>ESTIMATING RESOURCE REORGANIZATION [STAFF: {teamSize}] &gt;</p>
@@ -500,7 +500,7 @@ export default function Assessment() {
                     <div className="flex justify-between items-center text-[9px] font-mono text-slate-400 dark:text-slate-500 border-b border-gray-150 dark:border-white/5 pb-3 mb-6">
                       <span className="flex items-center gap-1.5 font-bold">
                         <Clipboard className="w-3.5 h-3.5 text-[#1890ff]" />
-                        {language === "zh" ? "云极洲 AI 转型顶层委员会专属评估报告" : "Yunjizhou AI Committee Advisory Report"}
+                        {language === "zh" ? "云极洲 AI 场景初步评估" : "Yunjizhou Initial AI Scenario Assessment"}
                       </span>
                       <span className="font-semibold">REPORT ID: #YJZ-2026-ROI</span>
                     </div>
@@ -508,7 +508,7 @@ export default function Assessment() {
                     {/* Report Header */}
                     <div className="mb-6">
                       <span className="inline-block px-2.5 py-0.5 rounded text-[10px] bg-blue-50 dark:bg-blue-950/20 text-[#1890ff] font-mono font-extrabold mb-2 tracking-wide border border-blue-100 dark:border-blue-900/40">
-                        EXECUTIVE ARCHITECTURE BLUEPRINT
+                        INITIAL SOLUTION DIRECTION
                       </span>
                       <h3 className="text-xl sm:text-2xl font-sans font-extrabold text-slate-900 dark:text-white tracking-tight leading-snug">
                         {result.title}
@@ -522,13 +522,13 @@ export default function Assessment() {
                     <div className="grid grid-cols-2 gap-4 bg-slate-50 dark:bg-slate-900/40 border border-gray-150 dark:border-white/5 p-4.5 rounded-xl text-center mb-6">
                       <div>
                         <span className="text-[10px] font-mono text-slate-450 dark:text-slate-500 block uppercase font-extrabold">
-                          {language === "zh" ? "预估年均综合能源及人力降本" : "Est. Annual Resource Expense Saved"}
+                          {language === "zh" ? "参考年化节省空间" : "Reference Annual Saving Potential"}
                         </span>
                         <span className="text-lg sm:text-xl font-mono font-extrabold text-[#00E5A3] block mt-1">{result.estimatedSaving}</span>
                       </div>
                       <div className="border-l border-gray-200 dark:border-white/5">
                         <span className="text-[10px] font-mono text-slate-450 dark:text-slate-500 block uppercase font-extrabold">
-                          {language === "zh" ? "核心业务端到端自动化能效提升" : "Process Efficiency Leverage Metric"}
+                          {language === "zh" ? "效率或响应提升参考" : "Efficiency / Response Improvement Reference"}
                         </span>
                         <span className="text-lg sm:text-xl font-mono font-extrabold text-[#1890ff] block mt-1">{result.productivityGain}</span>
                       </div>
@@ -537,7 +537,7 @@ export default function Assessment() {
                     {/* Dynamic Architecture Flowchart */}
                     <div className="mb-6">
                       <span className="block text-[10px] font-mono font-extrabold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-3">
-                        {language === "zh" ? "系统拓扑展现 (Integration Pipeline Flow)" : "Operational Integration Pipeline Flow"}
+                        {language === "zh" ? "建议接入路径" : "Suggested Integration Path"}
                       </span>
                       <div className="space-y-2 text-[11px] font-mono">
                         {result.architectureDiagram.map((dia, idx) => (
@@ -560,7 +560,7 @@ export default function Assessment() {
                     {/* Core System Module Recommendations */}
                     <div className="mb-6">
                       <span className="block text-[10px] font-mono font-extrabold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2.5">
-                        {language === "zh" ? "推荐核心组件推荐列表 (Recommends)" : "Recommended Core System Component Builds"}
+                        {language === "zh" ? "建议优先建设的能力" : "Recommended Capabilities to Build First"}
                       </span>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                         {result.modules.map((mod, idx) => (
@@ -578,7 +578,7 @@ export default function Assessment() {
                     {/* Timeline roadmap progression */}
                     <div>
                       <span className="block text-[10px] font-mono font-extrabold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-3">
-                        {language === "zh" ? "3阶段敏捷推进交割历程 (Agile Deliver Roadmap)" : "Iterative Agile Delivery Roadmap"}
+                        {language === "zh" ? "建议推进节奏" : "Suggested Rollout Plan"}
                       </span>
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                         {result.timeline.map((tl, idx) => (
@@ -604,15 +604,15 @@ export default function Assessment() {
                   <div className="mt-8 pt-4 border-t border-gray-150 dark:border-white/5 flex flex-col sm:flex-row gap-3 items-center justify-between">
                     <span className="text-[10px] text-slate-400 dark:text-slate-500 font-sans font-normal italic leading-relaxed max-w-md">
                       {language === "zh"
-                        ? "*本估算系基于云极洲历史交付数据模型离线推演，不构成要约，实际部署细节可会谈协商。"
-                        : "*Evaluations are model-based simulations derived from Yunjizhou historical deliveries. Actual parameters are negotiated in official quotes."}
+                        ? "*以上为演示性质的初步估算，不构成正式报价。实际周期、预算和收益需结合现场系统、数据质量和部署要求确认。"
+                        : "*This is a demo estimate, not a formal quote. Actual timeline, budget, and benefits depend on systems, data quality, and deployment requirements."}
                     </span>
                     <button
                       onClick={triggerExport}
                       className="inline-flex items-center gap-1.5 text-xs font-extrabold text-[#00E5A3] hover:text-[#00F5A0] transition-colors font-sans cursor-pointer"
                     >
                       <Download className="w-3.5 h-3.5 shrink-0" />
-                      <span>{language === "zh" ? "导出专家规划书.PDF" : "Export Blueprint Brochure.PDF"}</span>
+                      <span>{language === "zh" ? "导出初步建议.PDF" : "Export Recommendation.PDF"}</span>
                     </button>
                   </div>
 

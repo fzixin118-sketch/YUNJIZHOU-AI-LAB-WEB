@@ -28,7 +28,7 @@ const RAG_PRESETS: RagQA[] = [
       { doc: "集团差旅与报销核算细则第14页.pdf", content: "二类地区出差住宿费上限为450元/天，伙食补助100元/天。因公接待不享受重复餐补。", score: 0.887 },
       { doc: "合规条例汇编第4章.pdf", content: "所有报销须凭国家正式增值税专用发票或普通发票并附有详尽日程节点表方可承报。", score: 0.812 }
     ],
-    answer: "根据《保密单位工作差旅与安全核算细则》第12-14页，服务保密单位出差报销及宿补按照密级与城市安全等级划分：\n\n1. **住宿费标准**：一类地区（特殊保护及一线网点）每日限额最高为 **550元** ；二类地区每日限额最高为 **450元**。\n2. **餐补补助**：一类地区为 **120元/天** ；二类地区为 **100元/天**。补充说明，进行涉密公务接待或伴随任务的当日不重复申领普通餐补。\n3. **安全提示**：所有报销及行程凭证必须经过特制脱敏审批，并配合安全网点签到记录运行流程合规审计。"
+    answer: "根据已匹配到的差旅与报销细则，第12-14页给出的标准如下：\n\n1. **住宿费标准**：一类地区每日限额最高为 **550元**；二类地区每日限额最高为 **450元**。\n2. **餐补标准**：一类地区为 **120元/天**；二类地区为 **100元/天**。如当天已有公务接待安排，通常不重复申领普通餐补。\n3. **报销要求**：需提交合规发票、行程说明和审批记录，便于后续财务与审计核对。"
   },
   {
     question: "如何办理集团固定资产报废手续，需要通过哪些部门审批？",
@@ -37,15 +37,15 @@ const RAG_PRESETS: RagQA[] = [
       { doc: "受控资产与涉密装备监督管理合规手册.pdf", content: "单笔原值超过50万元人民币的受控保密资产报废或处置，需报安全委员会决策通过之日起10个工作日内报保密业务部门备案。", score: 0.891 },
       { doc: "集团固定资产管理制度第31条.docx", content: "报废申报单应由资产使用部门发起，经企管部、财务部会签，报分管副总经理批准。", score: 0.865 }
     ],
-    answer: "涉密或受控资产报废流程严格实施防泄密与防流失机制，办理手续及审核流程如下：\n\n1. **安全申报**：由资产使用部门提交《受控/保密资产离网处置申请单》，详细阐明报废真实成因与消磁/物理销毁计划。\n2. **技术检测**：对于涉及核心机密的设备（原值超10万元），需联合特种技术与保密办出具物理消磁/绝密销毁评估并联合会签。\n3. **多级权限**：申请单核准链路为：**使用部门 -> 安全保密科 -> 财务审价 -> 分管安全副总裁终核**。\n4. **安全审计备案**：当单笔资产原值超过 **50万元** 时，经安全委员会审批通过后，须严格于10个工作日内抄报保密监督管理机构备案，绝防信息流失与资产流失。"
+    answer: "固定资产报废建议按以下流程办理：\n\n1. **使用部门发起申请**：说明资产损坏原因、当前状态和拟处置方式。\n2. **技术与财务核验**：原值超过 **10万元** 的资产，需要提供技术鉴定报告，并由财务部和相关管理部门会签。\n3. **审批链路**：通常由使用部门发起，经企管部、财务部会签后，提交分管负责人审批。\n4. **备案要求**：单笔原值超过 **50万元** 的受控资产，审批通过后应在规定时间内完成备案。"
   },
   {
-    question: "保密单位如何防范核心有形/无形资产资产泄失，重大受控项目管理决策有哪些安全审计合规红线？",
+    question: "单位在重大项目和重要资产管理中，通常需要注意哪些审批和审计要求？",
     matchedChunks: [
       { doc: "受控资产与涉密装备监督管理合规手册.pdf", content: "明确受控重大项目和关乎安全体系的事项必须经安全委员会集体充分评估论证做出决定，严禁单人独断决策部署。", score: 0.957 },
       { doc: "服务保密单位管理责任暂行条例.pdf", content: "开展重要合作或敏感设备采购前，必须经具有相应保密资质的第三方评估机构完成独立系统安全测试与保密合规调查。", score: 0.874 }
     ],
-    answer: "为防范重大物资与涉密资产流失，保密单位在重大受控决策、非公开大额采购投资中，必须严格恪守以下核心安全合规红线：\n\n1. **集体论证红线**：严禁个人专断涉密项目引进或特种设备调度，关涉安全核心事项必须经过安全委员会集体闭门论证并形成绝密会签纪要。\n2. **多重安全评估**：凡涉及机密资产转让、新型软硬件集成或者特种配套研发，必须引入具备国家保密局颁发资质的独立第三方，做极其严密的无损渗透与安全资质评估审查，严防间谍渗透或关键技术被锁。\n3. **责任追究追溯终身**：若决策存在疏漏洞、未经合规认证便引入境外未认证元件，或无尽职调查导致重大系统泄密与重大资产流失的，决策管理层及关键执行人将被终身追究保密与审计责任。"
+    answer: "重大项目和重要资产管理一般建议关注三类要求：\n\n1. **集体决策**：涉及关键资产、重要采购或重大系统变更时，应由相关委员会或管理层集体评估，避免单人决策。\n2. **第三方评估**：对于安全要求高的合作、设备采购或系统接入，可引入具备资质的第三方机构做安全测试与合规评估。\n3. **过程留痕**：保留评估报告、审批记录、会议纪要和执行结果，便于后续审计、复盘和责任界定。"
   }
 ];
 
@@ -68,8 +68,8 @@ export default function Sandbox() {
   const [isAnnotated, setIsAnnotated] = useState(true);
   const [fps, setFps] = useState(25);
   const [visionLogs, setVisionLogs] = useState<string[]>([
-    "08:30:12 系统初始化：公安实战模型部署完毕",
-    "08:30:15 边缘端推理设备就绪 [FPS: 25, 延迟: 14ms]",
+    "08:30:12 系统初始化：视频巡检演示已启动",
+    "08:30:15 边缘分析设备就绪 [FPS: 25, 延迟: 14ms]",
   ]);
 
   // === IBMS State ===
@@ -87,18 +87,18 @@ export default function Sandbox() {
     setSecurityStatus(type);
     if (type === "intrusion") {
       setIbmsLogs(prev => [
-        `[${ts} 【极危安防警报】] 智能视频AI分析模组检出: B栋5层外立面存在非法入侵攀爬行径! 置信度 96.8%!`,
-        `[${ts} 【IBMS自动反控】] 触发强电PLC联动! 自动切断非必要信道, 降下5处防爆卷帘门 & 启动西外圈防卫强光探探针探照频闪!`,
-        `[${ts} 【应急指挥调度】] 已定位入侵者坐标点, 实战调度指令已向3位该片区当值安保执法端手持终端定向推送轨迹引导!`,
-        `[${ts} 【消防安保安防】] 结合大堂雷达感应, A门与B门禁行通道闭合, 锁定入侵路线!`,
+        `[${ts} 【入侵提醒】] 视频分析识别到 B 栋 5 层外立面疑似攀爬行为，置信度 96.8%。`,
+        `[${ts} 【IBMS联动】] 已触发照明、门禁与现场广播演练流程，并记录 PLC 联动指令。`,
+        `[${ts} 【安保通知】] 已将可疑位置和建议处置路线推送至当值安保终端。`,
+        `[${ts} 【通道控制】] A 门与 B 门禁临时收紧，便于现场确认。`,
         ...prev
       ]);
     } else if (type === "fire") {
       setIbmsLogs(prev => [
-        `[${ts} 【特大消防警报】] C区地下机房明火红外探测联合确权: 检测到早期高热明火苗头!`,
-        `[${ts} 【IBMS自动反控】] 新风进风关阀, 排烟排风扇满载强开! 电梯自动返回首层强开对门以防人员受困!`,
-        `[${ts} 【应急指挥调度】] 全大楼IP广播和电子紧急逃生路线图谱一键置顶推送, 动态智能微调避烟绿色绿色向导路线!`,
-        `[${ts} 【多端协同响应】] 物业强消大屏、视频追踪流、联动现场温湿阻燃电扣全数自动释放!`,
+        `[${ts} 【火情提醒】] C 区地下机房温度与红外信号异常，系统建议现场复核。`,
+        `[${ts} 【IBMS联动】] 新风、排烟、电梯与广播进入火警演练流程。`,
+        `[${ts} 【疏散提示】] 电子导引屏已切换为应急路线提示。`,
+        `[${ts} 【多端协同】] 物业大屏、视频画面和设备状态已同步更新。`,
         ...prev
       ]);
     } else if (type === "panic") {
@@ -126,19 +126,19 @@ export default function Sandbox() {
   const runRagQA = () => {
     setRagState("filtering");
     setRagOutput("");
-    setRagSteps(["正在解构问题向量化...", "建立关联度权重矩阵..."]);
+    setRagSteps(["正在理解问题并生成检索向量...", "正在匹配最相关的内部资料..."]);
     
     setTimeout(() => {
       setRagState("reranking");
-      setRagSteps(prev => [...prev, "过滤噪音，匹配最佳文档碎片...", "将Top-3合规片段拼接至语言上下文窗口..."]);
+      setRagSteps(prev => [...prev, "正在过滤低相关内容...", "正在把 Top-3 资料片段交给大模型生成回答..."]);
       
       setTimeout(() => {
         setRagState("generating");
-        setRagSteps(prev => [...prev, "无幻觉答复合成中..."]);
+        setRagSteps(prev => [...prev, "正在生成带来源依据的回答..."]);
         
         let targetText = RAG_PRESETS[selectedRagPreset].answer;
         if (customQuestion.trim()) {
-          targetText = `这是针对您的自定义问题「${customQuestion}」的智能化企业级RAG解答：\n\n1. **数据匹配**：本系统已经自动匹配到相关规章。由于当前处于官网演示离线沙箱，我们匹配了高相似的《保密单位合规管理办法》进行拟真推理。\n\n2. **智脑解答**：针对您的描述，我们推荐将文档以1024-token划分为独立重叠文本块。配合向量检索引擎（Cosine Similarity 计算，召回率高达99.2%），并使用本公司独创的企业合规知识过滤器，可有效杜绝大模型在行业术语上的任何“幻觉”。\n\n3. **流程指引**：如项目方案需要实际全功能定制演示（含全套自研重排、冷热知识多路联合匹配、本地主流模型微调微部署），欢迎随时申请我们的免费数字化AI转型方案规划。`;
+          targetText = `这是针对您的自定义问题「${customQuestion}」的演示回答：\n\n1. **先找依据**：系统会先在内部制度、合同、手册等资料中查找相关片段，而不是直接凭空回答。\n\n2. **再生成结论**：在真实项目中，我们会根据资料类型设置分段策略，并结合向量检索（Cosine Similarity）、关键词检索和重排模型，提高答案命中率与可追溯性。\n\n3. **适合场景**：如果您需要在内网或离线环境中使用，我们可以进一步演示私有知识库、权限控制、来源引用和后台审计等完整能力。`;
         }
         
         let index = 0;
@@ -149,7 +149,7 @@ export default function Sandbox() {
           } else {
             clearInterval(interval);
             setRagState("completed");
-            setRagSteps(prev => [...prev, "回答合成完毕，完全契合审计标准。"]);
+            setRagSteps(prev => [...prev, "回答已生成，可查看引用来源。"]);
           }
         }, 15);
       }, 1000);
@@ -201,7 +201,7 @@ export default function Sandbox() {
       } else if (visionMode === "loiter") {
         const rand = Math.random();
         if (rand > 0.6) {
-          logMsg = `[警告提示] 监测到 203# 目标在重点周界及敏感区域连续绕行徘徊超 120 秒，启动意图概率精算`;
+          logMsg = `[提醒] 监测到 203# 目标在重点区域连续徘徊超过 120 秒，建议现场关注`;
         } else if (rand > 0.3) {
           logMsg = `[意图分析] 徘徊轨迹热度异常，越界企图可能性评估: ${(65 + rand * 20).toFixed(1)}%`;
         } else {
@@ -210,7 +210,7 @@ export default function Sandbox() {
       } else if (visionMode === "fall") {
         const rand = Math.random();
         if (rand > 0.7) {
-          logMsg = `[特大危险告警] 监舍 041# 墙面接触传感器与视觉检测联协触发：疑似目标发生倒地或过激撞墙行为！`;
+          logMsg = `[风险提醒] 041# 区域传感器与视觉检测同时触发：疑似人员倒地或撞击墙面`;
         } else if (rand > 0.4) {
           logMsg = `[生命体征估算] 倒地目标体态夹角异常（平行地面 < 15度），已触发一键紧急通传医护广播。`;
         } else {
@@ -329,8 +329,8 @@ export default function Sandbox() {
           </h2>
           <p className="mt-3.5 text-sm text-slate-600 dark:text-slate-300 font-normal leading-relaxed">
             {language === "zh"
-              ? "告别空洞PPT。我们为您提供实机沙箱演示，您可以模拟保密单位合规研讯、公安行为标定和商业大楼低能耗自控反应，亲眼见证真实的数智成效。"
-              : "Move beyond slides. Try our real-time simulation sandbox to run enterprise-grade compliance querying, police behavior tracking, and low-energy HVAC building automation."}
+      ? "这里用几个典型场景演示云极洲能做什么：内部资料问答、视频异常提醒、楼宇节能与联动控制。您可以先感受效果，再进一步讨论真实项目。"
+      : "Try a few typical scenarios: internal knowledge Q&A, video alerts, and building energy/linkage control. See the effect before discussing a real project."}
           </p>
         </div>
 
@@ -347,9 +347,9 @@ export default function Sandbox() {
           >
             <Bot className={`w-5 h-5 shrink-0 transition-colors ${activeTab === 'rag' ? 'text-slate-950' : 'text-[#00F5A0]'}`} />
             <div>
-              <div className="text-sm font-bold">{language === "zh" ? "保密单位智能问答RAG系统" : "Confidential Unit RAG AI"}</div>
+              <div className="text-sm font-bold">{language === "zh" ? "内部资料智能问答" : "Internal Knowledge Q&A"}</div>
               <div className="text-[10px] font-mono opacity-70">
-                {language === "zh" ? "私有知识管理 · 混合重排" : "Private Knowledge · Reranker"}
+                {language === "zh" ? "私有知识库 · RAG 溯源" : "Private Knowledge · RAG Sources"}
               </div>
             </div>
           </button>
@@ -364,9 +364,9 @@ export default function Sandbox() {
           >
             <Shield className={`w-5 h-5 shrink-0 transition-colors ${activeTab === 'vision' ? 'text-white' : 'text-[#00B2FE]'}`} />
             <div>
-              <div className="text-sm font-bold">{language === "zh" ? "公安智能视频分析模型" : "Police Intelligent Vision AI"}</div>
+              <div className="text-sm font-bold">{language === "zh" ? "视频巡检与异常提醒" : "Video Monitoring & Alerts"}</div>
               <div className="text-[10px] font-mono opacity-70">
-                {language === "zh" ? "边缘百路解码 · 毫秒级标定" : "Edge Decodes · Sub-second Alert"}
+                {language === "zh" ? "边缘分析 · 实时告警" : "Edge Analysis · Live Alerts"}
               </div>
             </div>
           </button>
@@ -381,9 +381,9 @@ export default function Sandbox() {
           >
             <Building2 className={`w-5 h-5 shrink-0 transition-colors ${activeTab === 'ibms' ? 'text-white' : 'text-purple-400'}`} />
             <div>
-              <div className="text-sm font-bold">{language === "zh" ? "商业园区 AI+IBMS 楼控" : "Corporate Parks AI+IBMS"}</div>
+              <div className="text-sm font-bold">{language === "zh" ? "楼宇节能与 AI+IBMS" : "Building Energy & AI+IBMS"}</div>
               <div className="text-[10px] font-mono opacity-70">
-                {language === "zh" ? "空调冷水寻优 · 变频省电25%" : "HVAC Optimization · Saved 25%"}
+                {language === "zh" ? "空调优化 · 设备联动" : "HVAC Optimization · Device Linkage"}
               </div>
             </div>
           </button>
@@ -410,17 +410,17 @@ export default function Sandbox() {
                   <div>
                     <div className="flex items-center gap-2 mb-4">
                       <span className="px-2 py-0.5 rounded text-[10px] bg-[#00F5A0]/10 text-[#00E5A3] font-bold font-mono border border-[#00F5A0]/20">CASE 01</span>
-                      <span className="text-xs text-[#00B2FE] font-[#00B2FE] font-semibold">{language === "zh" ? "涉密保障落地实例" : "Confidential Operations Case"}</span>
+                      <span className="text-xs text-[#00B2FE] font-[#00B2FE] font-semibold">{language === "zh" ? "内部制度查询示例" : "Internal Policy Search Example"}</span>
                     </div>
 
-                    <h3 className="text-lg font-extrabold text-slate-900 dark:text-white mb-2.5">多文档高精准防幻觉自研 RAG 智库</h3>
+                    <h3 className="text-lg font-extrabold text-slate-900 dark:text-white mb-2.5">带来源的内部资料问答</h3>
                     <p className="text-xs text-slate-500 font-normal leading-relaxed mb-6">
-                      深度提效政策查核与制度检索。拒绝公有云托管泄密，全合规支持局域网安全离线运行。整合两阶段重选排序器，确保输出只针对限定信源拼接，避开AI胡编。
+                      把制度、手册和合同接入私有知识库，员工可直接提问。系统会先检索相关材料，再基于来源生成回答；高要求场景可加入 RAG、重排模型和离线部署。
                     </p>
 
                     {/* Pre-set questions selectors */}
                     <div className="space-y-2.5 mb-6">
-                      <span className="block text-[10px] font-mono font-extrabold text-[#00B2FE] uppercase tracking-wider mb-2">测试预设合规提问句</span>
+                      <span className="block text-[10px] font-mono font-extrabold text-[#00B2FE] uppercase tracking-wider mb-2">选择一个示例问题</span>
                       {RAG_PRESETS.map((p, idx) => (
                         <button
                           key={idx}
@@ -441,7 +441,7 @@ export default function Sandbox() {
                     <div className="relative mb-4">
                       <input
                         type="text"
-                        placeholder="或者输入您关心的内部规则提同，模拟自研大模型精确解答..."
+                        placeholder="也可以输入您关心的内部制度问题..."
                         value={customQuestion}
                         onChange={(e) => setCustomQuestion(e.target.value)}
                         className="w-full text-xs p-3 pr-10 rounded-xl bg-slate-50 border border-gray-150 outline-none text-slate-800 placeholder:text-slate-400 focus:border-[#00B2FE]/30 focus:bg-white transition-all font-sans"
@@ -458,7 +458,7 @@ export default function Sandbox() {
                       id="rag-run-btn"
                     >
                       <Cpu className="w-4 h-4 text-slate-950 animate-pulse" />
-                      <span>模拟执行 RAG 检索 & 大模型生成</span>
+                      <span>开始检索并生成回答</span>
                     </button>
                   </div>
                 </div>
@@ -512,7 +512,7 @@ export default function Sandbox() {
                         <span className="text-indigo-600 font-extrabold block mb-1">VECTOR CHUNK RETRIEVED (VECTOR_INDEX):</span>
                         {customQuestion.trim() ? (
                           <div className="text-[10px] text-slate-500 leading-relaxed italic">
-                            正在采用两路相关匹配算法寻找相似分词（余弦检索模型部署于本地算力设备）...
+                            正在检索相似资料片段，本地向量检索会优先匹配更相关的内容...
                           </div>
                         ) : (
                           RAG_PRESETS[selectedRagPreset].matchedChunks.map((chunk, cIdx) => (
@@ -531,7 +531,7 @@ export default function Sandbox() {
                     {/* Generative Text Stream */}
                     {ragOutput && (
                       <div className="text-slate-800 font-sans leading-relaxed text-xs p-3.5 bg-[#00F5A0]/5 border border-[#00F5A0]/15 rounded-xl">
-                        <strong className="text-[#00E5A3] block font-extrabold mb-1.5">云极洲本地大模型回复（严格比对限定内容，剔除幻觉）：</strong>
+                        <strong className="text-[#00E5A3] block font-extrabold mb-1.5">云极洲本地大模型回复（基于上方来源生成）：</strong>
                         <p className="whitespace-pre-line text-slate-700 font-medium">{ragOutput}</p>
                         {ragState !== "completed" && <span className="inline-block w-1.5 h-4 bg-[#00F5A0] ml-1 animate-pulse" />}
                       </div>
@@ -568,12 +568,12 @@ export default function Sandbox() {
                   <div>
                     <div className="flex items-center gap-2 mb-4">
                       <span className="px-2 py-0.5 rounded text-[10px] bg-blue-50 text-[#1890ff] font-bold font-mono border border-blue-100">CASE 02</span>
-                      <span className="text-xs text-[#1890ff] font-semibold">警务智能安全及高危作业排查</span>
+                      <span className="text-xs text-[#1890ff] font-semibold">重点区域视频巡检示例</span>
                     </div>
 
-                    <h3 className="text-lg font-extrabold text-[#1f2329] dark:text-white mb-3">边缘智能高精度视频流视觉中枢</h3>
+                    <h3 className="text-lg font-extrabold text-[#1f2329] dark:text-white mb-3">自动识别异常情况的视频巡检</h3>
                     <p className="text-xs text-slate-500 font-normal leading-relaxed mb-6 font-sans">
-                      深度部署于重点提审空域、高危作业车间及流动闸口。系统利用高容耦算力节点支持边缘多并发解码，对异常徘徊、人员跌倒或者睡岗违规毫秒级感知，输出直观告警标定。
+                      接入现有摄像头后，系统可对徘徊、跌倒、越界、拥堵等情况做自动提醒，减少人工长时间盯屏。对网络和安全要求高的场景，可在边缘设备本地分析视频流。
                     </p>
 
                     {/* Mode selector */}
@@ -677,7 +677,7 @@ export default function Sandbox() {
                     <div className="space-y-4 bg-white/[0.02] p-4 rounded-xl border border-white/5 mb-6">
                       <div>
                         <div className="flex justify-between text-xs text-slate-300 font-medium mb-1">
-                          <span>告警置信度阈值 (Threshold)</span>
+                        <span>告警敏感度 (Threshold)</span>
                           <span className="font-mono text-emerald-400">{threshold}%</span>
                         </div>
                         <input
@@ -691,20 +691,20 @@ export default function Sandbox() {
                       </div>
 
                       <div className="flex items-center justify-between">
-                        <span className="text-xs text-slate-300 font-medium">边缘设备运行帧率</span>
+                        <span className="text-xs text-slate-300 font-medium">视频分析帧率</span>
                         <select
                           className="text-xs p-1 bg-slate-900 border border-white/10 rounded outline-none text-slate-300"
                           value={fps}
                           onChange={(e) => setFps(Number(e.target.value))}
                         >
                           <option value="15">15 FPS (低功耗)</option>
-                          <option value="25">25 FPS (高精准)</option>
-                          <option value="40">40 FPS (极致实时)</option>
+                          <option value="25">25 FPS (均衡)</option>
+                          <option value="40">40 FPS (更实时)</option>
                         </select>
                       </div>
 
                       <div className="flex items-center justify-between">
-                        <span className="text-xs text-slate-300 font-medium">模型跟踪边界描绘 (Annotations)</span>
+                        <span className="text-xs text-slate-300 font-medium">显示识别框 (Annotations)</span>
                         <label className="relative inline-flex items-center cursor-pointer">
                           <input 
                             type="checkbox" 
@@ -730,12 +730,12 @@ export default function Sandbox() {
                       {isPlaying ? (
                         <>
                           <Pause className="w-4 h-4 text-slate-500 shrink-0" />
-                          <span>停止实时检测流</span>
+                          <span>暂停演示</span>
                         </>
                       ) : (
                         <>
                           <Play className="w-4 h-4 text-white shrink-0" />
-                          <span>启动实时监测流</span>
+                          <span>继续演示</span>
                         </>
                       )}
                     </button>
@@ -1374,25 +1374,25 @@ export default function Sandbox() {
                   <div>
                     <div className="flex items-center gap-2 mb-4">
                       <span className="px-2 py-0.5 rounded text-[10px] bg-purple-50 text-[#722ed1] font-bold font-mono border border-purple-100">CASE 03</span>
-                      <span className="text-xs text-[#722ed1] font-semibold font-sans">商业园区 AI+IBMS 智能指挥能效控制网</span>
+                      <span className="text-xs text-[#722ed1] font-semibold font-sans">楼宇节能与设备联动示例</span>
                     </div>
 
-                    <h3 className="text-lg font-extrabold text-[#1f2329] dark:text-white mb-3">AI+IBMS 立体安防联动与能效指挥调度中枢</h3>
+                    <h3 className="text-lg font-extrabold text-[#1f2329] dark:text-white mb-3">AI+IBMS 楼宇节能与联动控制</h3>
                     <p className="text-xs text-slate-500 font-normal leading-relaxed mb-6">
-                      将环境气象热力寻优控制与周界边缘智能安防深度耦合织网。一端触警时，IBMS楼控秒级跨硬件自动反控新风、防排烟风机、电梯及物理逃生导牌，实现一键反向联动与协同指挥。
+                      根据人流、天气和设备状态动态调整空调运行，帮助降低能耗。遇到火警、入侵等事件时，可联动 IBMS、门禁、电梯、广播和导引屏，形成统一响应。
                     </p>
 
                     {/* Integrated security linkage dispatch panel */}
                     <div className="p-4 rounded-xl border border-rose-500/25 bg-rose-500/5 mb-6">
                       <div className="flex items-center gap-2 mb-2.5">
                         <Shield className="w-4 h-4 text-rose-500 animate-pulse" />
-                        <span className="text-xs font-extrabold text-[#1f2329] dark:text-rose-400">跨系统安全监测与应急调度面板</span>
+                        <span className="text-xs font-extrabold text-[#1f2329] dark:text-rose-400">跨系统联动演练面板</span>
                       </div>
                       
                       {securityStatus === "normal" ? (
                         <div className="text-[11px] text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 p-2 rounded border border-emerald-500/20 mb-3 flex items-center gap-1.5 font-medium">
                           <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-                          <span>系统状态: 运转良好 (无异常入侵，温空气象自适应中)</span>
+                          <span>系统状态：运行正常，空调策略正在根据人流与天气自动调整</span>
                         </div>
                       ) : (
                         <div className="text-[11px] text-rose-600 dark:text-rose-450 bg-rose-500/10 p-2.5 rounded border border-rose-500/25 mb-3 flex flex-col gap-2 font-medium">
@@ -1400,9 +1400,9 @@ export default function Sandbox() {
                             <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse shrink-0 mt-1"></span>
                             <span>
                               联动指令已下发: {
-                                securityStatus === "intrusion" ? "🟠 B5攀爬可疑行径。已升格探照频闪，锁定AB二级门禁，调度近片哨位拦截" :
-                                securityStatus === "fire" ? "🔴 地下明火确权。防火扇强排排烟，引导电梯下行落锁，IP逃生图全楼强开" :
-                                "🟡 大堂突发肢体冲突。已物理锁死防护舱，转接110局端，闸机全开疏导群众"
+                                securityStatus === "intrusion" ? "🟠 B5 区域疑似入侵。已联动照明、门禁与安保终端，并生成处置提示" :
+                                securityStatus === "fire" ? "🔴 地下机房疑似火情。已联动排烟、新风、电梯和楼内广播演练流程" :
+                                "🟡 大堂疑似冲突聚集。已联动安保通知、闸机疏导和现场广播提示"
                               }
                             </span>
                           </div>
@@ -1410,12 +1410,12 @@ export default function Sandbox() {
                             onClick={resetSecurityLinkage}
                             className="bg-rose-600 dark:bg-rose-500 hover:opacity-90 text-white text-[10px] font-extrabold py-1.5 px-3 rounded transition-all cursor-pointer border-0 shadow-sm shadow-rose-500/10 hover:shadow-rose-500/25 self-start"
                           >
-                            恢复正常低碳状态 (Reset System)
+                            恢复日常运行 (Reset)
                           </button>
                         </div>
                       )}
 
-                      <span className="block text-[10px] font-mono font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">一键触发跨系统安防演练指挥/调度:</span>
+                      <span className="block text-[10px] font-mono font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">一键触发联动演练:</span>
                       <div className="grid grid-cols-3 gap-1.5">
                         <button
                           onClick={() => triggerSecurityLinkage("intrusion")}
@@ -1425,7 +1425,7 @@ export default function Sandbox() {
                               : "bg-white/[0.04] dark:bg-[#060b19] hover:bg-slate-100 dark:hover:bg-slate-800 border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-200"
                           }`}
                         >
-                          B5入侵联动
+                          入侵联动
                         </button>
                         <button
                           onClick={() => triggerSecurityLinkage("fire")}
@@ -1435,7 +1435,7 @@ export default function Sandbox() {
                               : "bg-white/[0.04] dark:bg-[#060b19] hover:bg-slate-100 dark:hover:bg-slate-800 border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-200"
                           }`}
                         >
-                          地下火警强消
+                          火警联动
                         </button>
                         <button
                           onClick={() => triggerSecurityLinkage("panic")}
@@ -1445,19 +1445,19 @@ export default function Sandbox() {
                               : "bg-white/[0.04] dark:bg-[#060b19] hover:bg-slate-100 dark:hover:bg-slate-800 border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-200"
                           }`}
                         >
-                          大堂冲突调度
+                          大堂疏导
                         </button>
                       </div>
                     </div>
 
                     {/* Mode selector */}
                     <div className="space-y-3 mb-6">
-                      <span className="block text-[10px] font-mono font-extrabold text-[#722ed1] uppercase tracking-wider mb-2">切换 AI 能效动态控制策略</span>
+                      <span className="block text-[10px] font-mono font-extrabold text-[#722ed1] uppercase tracking-wider mb-2">切换能耗控制策略</span>
                       <div className="grid grid-cols-3 gap-2">
                         <button
                           onClick={() => {
                             setAiMode("economy");
-                            setIbmsLogs(p => ["系统指令: 转换至「极致节能低碳」控制逻辑（能效高压）", ...p]);
+                            setIbmsLogs(p => ["系统指令：已切换至「节能优先」策略，优先降低空调能耗", ...p]);
                           }}
                           className={`py-2 px-1 text-center rounded-lg text-xs font-semibold border cursor-pointer transition-colors ${
                             aiMode === "economy"
@@ -1465,12 +1465,12 @@ export default function Sandbox() {
                               : "bg-white/[0.02] hover:bg-white/[0.06] border-white/5 text-slate-300"
                           }`}
                         >
-                          节能减排 (Economy)
+                          节能优先
                         </button>
                         <button
                           onClick={() => {
                             setAiMode("comfort");
-                            setIbmsLogs(p => ["系统指令: 转换至「舒适度优先」调配方式（轻微节能）", ...p]);
+                            setIbmsLogs(p => ["系统指令：已切换至「舒适优先」策略，优先保持体感稳定", ...p]);
                           }}
                           className={`py-2 px-1 text-center rounded-lg text-xs font-semibold border cursor-pointer transition-colors ${
                             aiMode === "comfort"
@@ -1478,12 +1478,12 @@ export default function Sandbox() {
                               : "bg-white/[0.02] hover:bg-white/[0.06] border-white/5 text-slate-300"
                           }`}
                         >
-                          舒适优先 (Comfort)
+                          舒适优先
                         </button>
                         <button
                           onClick={() => {
                             setAiMode("safety");
-                            setIbmsLogs(p => ["系统指令: 转换至「设备限容保护」预分配运行模式", ...p]);
+                            setIbmsLogs(p => ["系统指令：已切换至「设备保护」策略，优先控制负载波动", ...p]);
                           }}
                           className={`py-2 px-1 text-center rounded-lg text-xs font-semibold border cursor-pointer transition-colors ${
                             aiMode === "safety"
@@ -1491,7 +1491,7 @@ export default function Sandbox() {
                               : "bg-white/[0.02] hover:bg-white/[0.06] border-white/5 text-slate-300"
                           }`}
                         >
-                          机械保护 (Safety)
+                          设备保护
                         </button>
                       </div>
                     </div>
@@ -1500,7 +1500,7 @@ export default function Sandbox() {
                     <div className="space-y-4 bg-white/[0.02] p-4 rounded-xl border border-white/5 mb-6">
                       <div>
                         <div className="flex justify-between text-xs text-slate-300 font-medium mb-1">
-                          <span>模拟园区楼宇人流量 (Occupancy)</span>
+                          <span>模拟楼内人流量 (Occupancy)</span>
                           <span className="font-mono text-indigo-400 font-semibold">{occupancy}%</span>
                         </div>
                         <input

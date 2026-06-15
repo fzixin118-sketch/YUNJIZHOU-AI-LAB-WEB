@@ -21,37 +21,37 @@ export default function Team() {
 
   const CAPABILITIES: CapabilityBlock[] = [
     {
-      title: language === "zh" ? "特制物理隔离与涉密网合规" : "Hardened Isolation & Air-Gap Compliance",
-      subtitle: language === "zh" ? "100% 局域网离线自主流部署" : "100% Air-Gapped Local Deployment",
+      title: language === "zh" ? "本地私有化与离线部署" : "Private Local & Offline Deployment",
+      subtitle: language === "zh" ? "适配内网、专网与高安全环境" : "For Intranets, Private Networks, and Secure Sites",
       icon: Lock,
       description: language === "zh"
-        ? "针对服务保密单位和高安全性政企，支持完全物理隔离、涉密专用局域网等离线环境部署。内置特制的数据安全沙箱与主动防御引擎，物理层面杜绝敏感信息外泄，支持无网环境的完整离线审计合规。"
-        : "Engineered specifically for confidential service units needing on-premises installations. Fully supports hardware physical isolation with built-in sandbox security walls, ensuring zero diagnostic data leaks to outer public connections.",
+        ? "针对不能使用公有云、不能把资料传出内网的客户，我们支持本地服务器、专网和物理隔离环境部署。数据留在客户现场，便于安全审计和内部管理。"
+        : "For clients that cannot use public cloud or send data outside their network, we support local servers, private networks, and physically isolated environments.",
       tags: language === "zh"
-        ? ["物理脱网部署", "安全防注入", "国家保密规范评估", "局域脱敏审计"]
-        : ["Air-Gap Isolated", "Zero External Hooks", "Confidential Standard Compliant", "Sovereign Air-Gap Sandbox"]
+        ? ["本地部署", "内网运行", "权限控制", "审计留痕"]
+        : ["Local Deployment", "Intranet Ready", "Access Control", "Audit Logs"]
     },
     {
-      title: language === "zh" ? "国内外主流硬件与异构算力全方位适配" : "Mainstream Global & Sovereign Hardware Adaptation",
-      subtitle: language === "zh" ? "英伟达/昇腾异构异源编译器级重排优化" : "Optimization on Global & Local Heterogeneous Compute",
+      title: language === "zh" ? "多种硬件与系统适配" : "Hardware and System Compatibility",
+      subtitle: language === "zh" ? "兼容主流服务器、边缘设备与国产环境" : "Works With Servers, Edge Devices, and Localized Environments",
       icon: Cpu,
       description: language === "zh"
-        ? "全面适配并高度兼容英伟达 NVIDIA, 昇腾 Ascend、瑞芯微 Rockchip、寒武纪 Cambricon 等国内外主流异质芯片体系，支持银河麒麟、统信及主流 Linux 操作系统。自研低时延全平台编译器，将端侧视觉与语言大模型指令优化度提升 45%。"
-        : "Fully optimized and highly compatible with both global and local high-performance hardware (NVIDIA, Ascend, Rockchip, Cambricon chipsets). Low-level compiler optimization reduces memory footprints, yielding up to 45% latency gains and enabling responsive cross-platform edge inference.",
+        ? "可根据客户现有设备选型部署，支持 NVIDIA、昇腾、瑞芯微、寒武纪等常见硬件，以及银河麒麟、统信和主流 Linux 环境。关键性能场景可做模型压缩与推理加速。"
+        : "We adapt to the client's existing hardware where possible, including NVIDIA, Ascend, Rockchip, Cambricon, Kylin, UOS, and mainstream Linux environments.",
       tags: language === "zh"
-        ? ["国内外主流芯片适配", "异构算力调度", "端侧编译重排", "极致算力释放"]
-        : ["NVIDIA & Ascend Tuned", "Heterogeneous Scheduling", "Compiler Optimizations", "Cross-Platform Scaling"]
+        ? ["主流芯片适配", "边缘设备部署", "国产系统支持", "模型推理优化"]
+        : ["Chipset Support", "Edge Deployment", "Localized OS Support", "Inference Tuning"]
     },
     {
-      title: language === "zh" ? "政企智能知识检索与秒级问答" : "On-Premises Intelligent Document Search & Live Q&A",
-      subtitle: language === "zh" ? "告别繁琐翻查，彻底降本增效" : "Eradicate manual lookups, 10x staff productivity",
+      title: language === "zh" ? "内部知识检索与智能问答" : "Internal Knowledge Search & Q&A",
+      subtitle: language === "zh" ? "减少翻资料时间，提高答复一致性" : "Less Manual Lookup, More Consistent Answers",
       icon: Layers,
       description: language === "zh"
-        ? "专为保密单位、政企知识库设计。彻底解决‘业务资料繁杂、政策更新频繁、人工翻阅极慢、外网 AI 工具禁入’的实际痛点。系统在完全不连接外网的环境下，数秒内即可从千万字规章制度、合同方案或专业卷宗中，精准找出所需条款并提炼出答案，回答精准不胡编，工作效率直观提升 90% 以上。"
-        : "Tailored for confidential units and internal knowledge centers. Resolves the critical pain points of massive, fragmented data, slow manual lookups, and strict no-cloud security policies. Operating entirely offline, it contextually crawls millions of words in regulations, manuals, or contracts within seconds to generate verified, accurate answers—instantly boosting retrieval speed by over 90%.",
+        ? "适合制度文件多、政策更新快、人工翻阅慢的单位。系统可在内网中检索规章、合同、手册和专业材料，给出带来源的回答，帮助员工更快找到可靠依据。"
+        : "Designed for teams with large document sets, frequent policy changes, and slow manual lookup. It searches regulations, contracts, manuals, and specialist files with source-backed answers.",
       tags: language === "zh"
-        ? ["海量规章秒级翻查", "100% 离线不泄密", "告别大海捞针", "回答精准不胡编"]
-        : ["Instant File Crawl", "100% Safe Offline", "No More Manual Search", "Precision Factual Output"]
+        ? ["资料快速检索", "来源可追溯", "离线可运行", "减少重复咨询"]
+        : ["Fast Search", "Traceable Sources", "Offline Ready", "Fewer Repeated Questions"]
     }
   ];
 
@@ -66,22 +66,22 @@ export default function Team() {
           </span>
           <h2 className="mt-5 text-3xl sm:text-4xl font-sans font-extrabold tracking-tight text-slate-900 dark:text-white">
             {language === "zh" 
-              ? "自研核心能力与高合规资质体系" 
-              : "Sovereign Technology Core & Compliance Qualifications"}
+              ? "可靠交付能力与安全适配经验" 
+              : "Reliable Delivery and Secure Adaptation Experience"}
           </h2>
           <p className="mt-4 text-sm text-slate-600 dark:text-slate-350 font-normal leading-relaxed">
             {language === "zh"
-              ? "云极洲构筑了高安全标准的自主可控软硬件一体方案，致力于将一流的技术深度融入重点保密单位与高安全性政企的转型进程中。我们专注于高要求、硬屏障的真实物理场景落地。"
-              : "Yunjizhou architects high-compliance hardware-software integration schemes. We strictly transform complex constraints of specialized air-gapped environments into reliable and secure functional outcomes."}
+              ? "我们关注的不只是模型效果，更关注系统能不能在客户现场长期稳定运行。云极洲具备从需求梳理、软件开发、硬件适配到部署维护的完整交付经验。"
+              : "We care about more than model performance. Yunjizhou supports the full path from requirements and software development to hardware adaptation, deployment, and maintenance."}
           </p>
           <p className="mt-3 text-sm text-slate-605 dark:text-slate-305 font-normal leading-relaxed">
             {language === "zh" ? (
               <>
-                在实践部署中，我们完全通过了多项安全合规度测试，支持将<strong>“完全离线私有化、全栈主流与异构硬件适配、精准防幻觉算法防护、低延迟端侧物联分析”</strong>做全生命周期的履约质量承托。
+                在高安全和复杂现场项目中，我们重点保障<strong>“数据不外流、系统可接入、结果可追溯、运行可维护”</strong>，并在需要时提供 RAG、边缘推理、IBMS/PLC 接入等专项能力。
               </>
             ) : (
               <>
-                Across critical systems deployment, we remain intensely committed to <strong>"air-gapped integrity, native heterogeneous compute adaptions, zero-leak sandboxing, and ultra-high recall RAG filters"</strong> with lifetime update guarantees.
+                For complex secure environments, we focus on <strong>"data staying local, systems integrating cleanly, results remaining traceable, and operations staying maintainable"</strong>, with RAG, edge inference, and IBMS/PLC integration where needed.
               </>
             )}
           </p>
@@ -120,7 +120,7 @@ export default function Team() {
                 {/* Tags tag cloud */}
                 <div>
                   <span className="block text-[9px] font-mono font-extrabold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-2.5">
-                    {language === "zh" ? "核心标准资质指标 (Key Specifications)" : "Key Specifications"}
+                    {language === "zh" ? "能力关键词" : "Key Capabilities"}
                   </span>
                   <div className="flex flex-wrap gap-1.5 mb-2">
                     {cap.tags.map((tag, tIdx) => (
@@ -137,7 +137,7 @@ export default function Team() {
                   <div className="flex items-center gap-2 justify-end border-t border-gray-150 dark:border-white/5 pt-4 mt-4">
                     <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
                     <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-bold uppercase tracking-wider">
-                      {language === "zh" ? "通过高等级评测" : "Audit Verified"}
+                      {language === "zh" ? "可按项目验收" : "Project Verifiable"}
                     </span>
                   </div>
                 </div>
@@ -155,12 +155,12 @@ export default function Team() {
             </div>
             <div>
               <h4 className="font-sans font-bold text-slate-900 dark:text-white text-sm">
-                {language === "zh" ? "自研系统交付与整体履约质量承托" : "Yunjizhou Security Delivery & Integration SLA"}
+                {language === "zh" ? "从试点到上线的交付支持" : "Delivery Support From Pilot to Launch"}
               </h4>
               <p className="text-xs text-slate-500 dark:text-slate-400 font-normal leading-relaxed mt-1">
                 {language === "zh"
-                  ? "我们承诺，由云极洲自主研发交付的所有算法版本、异构计算硬件，均满足业内极高安全评级。提供 24 个月物理伴随式升级与离线部署维护服务。"
-                  : "We formally commit that all firmware drivers, air-gapped pipelines, and custom heteregenous clusters deployed by Yunjizhou benefit from 24 months of on-premises SLA support."}
+                  ? "我们可提供需求调研、原型演示、现场部署、培训交接与持续维护支持，帮助客户把试点项目稳妥推进到正式使用。"
+                  : "We support discovery, prototype demos, on-site deployment, handover training, and maintenance so pilots can move into real use."}
               </p>
             </div>
           </div>
@@ -168,7 +168,7 @@ export default function Team() {
             href="#assessment"
             className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#1890ff] to-[#40a9ff] text-white font-sans text-xs font-bold tracking-wider shadow-sm hover:opacity-90 hover:shadow-md transition-all shrink-0 w-full md:w-auto text-center cursor-pointer"
           >
-            {language === "zh" ? "与系统规划专家会谈" : "Consult System Architects"}
+            {language === "zh" ? "预约方案沟通" : "Book a Solution Call"}
           </a>
         </div>
 

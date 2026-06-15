@@ -56,15 +56,15 @@ export default function Contact() {
                 {/* Header info */}
                 <div className="text-center sm:text-left max-w-xl mb-10">
                   <span className="px-3 py-1.5 rounded-md bg-blue-50 dark:bg-blue-950/20 text-[10px] font-mono tracking-widest text-[#1890ff] font-bold uppercase border border-blue-100 dark:border-blue-900/40">
-                    {language === "zh" ? "Connect With Our Architects / 联系我们" : "Connect With Our Architects"}
+                    {language === "zh" ? "Contact Us / 联系我们" : "Contact Us"}
                   </span>
                   <h2 className="mt-5 text-2xl sm:text-3xl font-sans font-extrabold text-[#1f2329] dark:text-white tracking-tight">
                     {language === "zh" ? "即刻开启数字化 AI 转型第一步" : "Take the First Step in Sourcing AI Transformation"}
                   </h2>
                   <p className="mt-2.5 text-xs text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
                     {language === "zh"
-                      ? "留下您的基本概况，云极洲的系统架构师与业务合伙人将在 2 个工作小时内与您对接，免费提供可行性报告建议。"
-                      : "Leave your operational constraints and coordinates below. Yunjizhou's solution experts will analyze your workflow and respond within 2 working hours with practical advisory proposals."}
+                      ? "简单留下需求和联系方式，我们会先判断场景是否适合 AI 改造，再给出下一步建议。沟通会尽量围绕业务价值、实施难度和预算边界展开。"
+                      : "Share your needs and contact details. We will first assess whether the scenario is suitable for AI, then suggest practical next steps."}
                   </p>
                 </div>
 
@@ -94,13 +94,13 @@ export default function Contact() {
                     </div>
                     <div>
                       <label className="block text-[10px] font-mono font-extrabold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">
-                        {language === "zh" ? "代表公司或单位职务 / Department" : "Company / Department"}
+                        {language === "zh" ? "公司 / 单位 / 部门" : "Company / Department"}
                       </label>
                       <input
                         type="text"
                         value={form.company}
                         onChange={(e) => setForm({ ...form, company: e.target.value })}
-                        placeholder={language === "zh" ? "例如：中铁三局信息化科" : "e.g. Smart Integration Dept."}
+                        placeholder={language === "zh" ? "例如：某园区运营部 / 信息化科" : "e.g. Operations or IT Department"}
                         className="w-full text-xs p-3.5 rounded-lg bg-slate-50 dark:bg-[#15181e]/40 border border-gray-200 dark:border-white/5 outline-none focus:border-[#1890ff] focus:bg-white dark:focus:bg-[#15181e] transition-all text-slate-800 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-600 font-sans"
                       />
                     </div>
@@ -122,7 +122,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <label className="block text-[10px] font-mono font-extrabold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">
-                        {language === "zh" ? "拟定意向服务模块 / Interested Areas" : "Interested Area"}
+                        {language === "zh" ? "关注方向 / Interested Area" : "Interested Area"}
                       </label>
                       <select
                         value={form.intendedArea}
@@ -131,17 +131,17 @@ export default function Contact() {
                       >
                         {language === "zh" ? (
                           <>
-                            <option value="docs" className="bg-white dark:bg-[#111317]">服务保密单位智能问答RAG系统</option>
-                            <option value="police" className="bg-white dark:bg-[#111317]">公安安防智能视频分析模型</option>
-                            <option value="park" className="bg-white dark:bg-[#111317]">商业/工业园区 AI+IBMS 楼控</option>
-                            <option value="custom" className="bg-white dark:bg-[#111317]">完全定制化软硬件集成 R&D</option>
+                            <option value="docs" className="bg-white dark:bg-[#111317]">内部资料问答 / 私有知识库</option>
+                            <option value="police" className="bg-white dark:bg-[#111317]">视频巡检与异常提醒</option>
+                            <option value="park" className="bg-white dark:bg-[#111317]">楼宇节能与 AI+IBMS 联动</option>
+                            <option value="custom" className="bg-white dark:bg-[#111317]">其他定制化系统集成</option>
                           </>
                         ) : (
                           <>
-                            <option value="docs" className="bg-white dark:bg-[#111317]">Confidential Unit Sovereign RAG system</option>
-                            <option value="police" className="bg-white dark:bg-[#111317]">Police Edge Video Analytics</option>
-                            <option value="park" className="bg-white dark:bg-[#111317]">Corporate AI+IBMS controls</option>
-                            <option value="custom" className="bg-white dark:bg-[#111317]">Custom Soft-HW Co-Engineering</option>
+                            <option value="docs" className="bg-white dark:bg-[#111317]">Private Knowledge Base / RAG</option>
+                            <option value="police" className="bg-white dark:bg-[#111317]">Video Monitoring & Alerts</option>
+                            <option value="park" className="bg-white dark:bg-[#111317]">Energy Saving & AI+IBMS Linkage</option>
+                            <option value="custom" className="bg-white dark:bg-[#111317]">Custom System Integration</option>
                           </>
                         )}
                       </select>
@@ -150,7 +150,7 @@ export default function Contact() {
 
                   <div>
                     <label className="block text-[10px] font-mono font-extrabold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">
-                      {language === "zh" ? "场景特征简述与要求 / Detailed Notes" : "Detailed Project Scope & Notes"}
+                      {language === "zh" ? "简单描述您的需求" : "Briefly Describe Your Need"}
                     </label>
                     <textarea
                       rows={3}
@@ -158,8 +158,8 @@ export default function Contact() {
                       onChange={(e) => setForm({ ...form, notes: e.target.value })}
                       placeholder={
                         language === "zh"
-                          ? "简单描述您大楼的能耗瓶颈、合规文档规模，或边缘视频安防布设，协助我们做足合规准备..."
-                          : "Mention your approximate campus size, document volume, or integration requirements to optimize our conversation..."
+                          ? "例如：资料太多不好查、视频巡检压力大、空调能耗高、想接入现有门禁/楼控系统..."
+                          : "For example: too many documents to search, heavy video monitoring workload, high HVAC cost, or existing access/IBMS integration..."
                       }
                       className="w-full text-xs p-3.5 rounded-lg bg-slate-50 dark:bg-[#15181e]/40 border border-gray-200 dark:border-white/5 outline-none focus:border-[#1890ff] focus:bg-white dark:focus:bg-[#15181e] transition-all text-slate-800 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-600 resize-none font-sans"
                     />
@@ -174,12 +174,12 @@ export default function Contact() {
                       {loading ? (
                         <>
                           <Send className="w-4 h-4 animate-spin text-slate-950" />
-                          <span>{language === "zh" ? "正在安全加密递交表单..." : "Transmitting Encrypted File..."}</span>
+                          <span>{language === "zh" ? "正在提交..." : "Submitting..."}</span>
                         </>
                       ) : (
                         <>
                           <Send className="w-4 h-4 text-slate-950" />
-                          <span>{language === "zh" ? "预约系统专家电话碰头会" : "Book Session with Architects"}</span>
+                          <span>{language === "zh" ? "预约方案沟通" : "Book a Solution Call"}</span>
                         </>
                       )}
                     </button>
@@ -199,25 +199,23 @@ export default function Contact() {
                 </div>
                 
                 <h3 className="text-xl sm:text-2xl font-sans font-extrabold text-slate-900 dark:text-white">
-                  {language === "zh" ? "咨询邀约递交成功！" : "Session Booked Successfully!"}
+                  {language === "zh" ? "提交成功！" : "Submitted Successfully!"}
                 </h3>
                 
                 <p className="mt-3.5 text-xs text-slate-600 dark:text-slate-300 max-w-md leading-relaxed font-normal">
                   {language === "zh" ? (
                     <>
-                      非常感谢您的青睐，亲爱的 <strong>{form.name}</strong> {form.company ? `（代表 ${form.company}）` : ""}。
+                      感谢您的留言，<strong>{form.name}</strong> {form.company ? `（${form.company}）` : ""}。
                       <br className="my-2 block" />
-                      我们已就您的意向模块 <strong>（{form.intendedArea === "docs" ? "保密单位自研RAG" : form.intendedArea === "police" ? "公安智能视频" : form.intendedArea === "park" ? "园区AI+IBMS" : "其它定制硬件集成"}）</strong> 安排对应领域的高级技术顾问。
-                      在未来的沟通中，我们系统的<strong>架构研发专家与安全顾问组</strong>将为您展示完备的物理级设备解构与高安全性软件联动拓扑。
-                      我们郑重承诺，本案规划将严格依据您的物理安全控制规范进行，绝不外泄任何敏感数据。系统架构师将于 24 小时内致电 <strong>{form.contactInfo}</strong> 辅助您规划安全转型。
+                      我们已记录您的关注方向 <strong>（{form.intendedArea === "docs" ? "内部资料问答" : form.intendedArea === "police" ? "视频巡检与异常提醒" : form.intendedArea === "park" ? "楼宇节能与 AI+IBMS" : "定制化系统集成"}）</strong>。
+                      后续沟通会围绕实际业务问题、现有系统情况、部署方式和预期收益展开。我们会通过 <strong>{form.contactInfo}</strong> 与您联系。
                     </>
                   ) : (
                     <>
-                      Thank you for trusting Yunjizhou, <strong>{form.name}</strong> {form.company ? `(on behalf of ${form.company})` : ""}.
+                      Thank you, <strong>{form.name}</strong> {form.company ? `from ${form.company}` : ""}.
                       <br className="my-2 block" />
-                      We have dispatched your consultation request for <strong>({form.intendedArea === "docs" ? "Confidential Unit RAG" : form.intendedArea === "police" ? "Police Vision AI" : form.intendedArea === "park" ? "Campus AI+IBMS" : "Custom HW Integrations"})</strong> to our specialist advisors.
-                      Our core systems development and safety advisory group will demonstrate physical-grade hardware configurations coupled with sovereign software topologies.
-                      We strictly commit to physical isolation standards and non-disclosure obligations. Our Senior Architect will reach out to <strong>{form.contactInfo}</strong> within 24 working hours to co-design your secure R&D strategy.
+                      We recorded your interest in <strong>({form.intendedArea === "docs" ? "Private Knowledge Q&A" : form.intendedArea === "police" ? "Video Monitoring & Alerts" : form.intendedArea === "park" ? "Energy & AI+IBMS" : "Custom Integration"})</strong>.
+                      Our follow-up will focus on your real workflow, existing systems, deployment needs, and expected value. We will reach you through <strong>{form.contactInfo}</strong>.
                     </>
                   )}
                 </p>
@@ -225,11 +223,11 @@ export default function Contact() {
                 <div className="mt-8 flex flex-col sm:flex-row gap-4">
                   <div className="px-4 py-2.5 bg-slate-50 dark:bg-slate-900 border border-gray-150 dark:border-white/5 rounded-xl text-[11px] font-mono text-slate-600 dark:text-slate-400 flex items-center gap-2">
                     <Calendar className="w-3.5 h-3.5 text-[#1890ff]" />
-                    <span>{language === "zh" ? "派单：资深系统架构总架构师" : "Dispatched: Principal Solutions Architect"}</span>
+                    <span>{language === "zh" ? "后续：需求确认与场景判断" : "Next: Need Review & Scenario Fit"}</span>
                   </div>
                   <div className="px-4 py-2.5 bg-slate-50 dark:bg-slate-900 border border-gray-150 dark:border-white/5 rounded-xl text-[11px] font-mono text-slate-600 dark:text-slate-400 flex items-center gap-2">
                     <PhoneCall className="w-3.5 h-3.5 text-emerald-500 animate-pulse" />
-                    <span>{language === "zh" ? "沟通耗时：30分钟极速契合对齐" : "Duration: 30-Min High-value Align"}</span>
+                    <span>{language === "zh" ? "建议预留：30分钟沟通时间" : "Suggested: 30-Min Call"}</span>
                   </div>
                 </div>
 

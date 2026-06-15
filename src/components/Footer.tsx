@@ -28,34 +28,34 @@ export default function Footer() {
             </p>
 
             <div className="text-[10px] text-slate-400 dark:text-slate-500 font-mono font-semibold uppercase tracking-wider">
-              SUSTAINABILITY COMMITMENT: ZERO-CARBON & ESG-COMPLIANT AI INTEGRATIONS
+              PRACTICAL AI · PRIVATE DEPLOYMENT · SYSTEM INTEGRATION
             </div>
           </div>
 
           {/* Column 2: Deployed solutions reference */}
           <div>
             <h4 className="text-xs font-bold text-slate-800 dark:text-slate-200 uppercase tracking-wider mb-4 font-sans">
-              {language === "zh" ? "落地核心产品 (Products)" : "Core Solutions"}
+              {language === "zh" ? "核心方向" : "Core Solutions"}
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
                 <a href="#sandbox" className="text-slate-650 dark:text-slate-405 hover:text-[#00E5A3] dark:hover:text-[#00F5A0] transition-colors">
-                  {language === "zh" ? "服务保密单位智能问答RAG系统" : "Confidential Unit Sovereign RAG AI"}
+                  {language === "zh" ? "内部资料智能问答" : "Private Knowledge Q&A"}
                 </a>
               </li>
               <li>
                 <a href="#sandbox" className="text-slate-650 dark:text-slate-405 hover:text-[#00E5A3] dark:hover:text-[#00F5A0] transition-colors">
-                  {language === "zh" ? "自研边缘视频安防系统" : "Edge Video Analytical Core"}
+                  {language === "zh" ? "视频巡检与异常提醒" : "Video Monitoring & Alerts"}
                 </a>
               </li>
               <li>
                 <a href="#sandbox" className="text-slate-650 dark:text-slate-405 hover:text-[#00E5A3] dark:hover:text-[#00F5A0] transition-colors">
-                  {language === "zh" ? "空调动力自适应能控系统" : "Thermodynamic HVAC PLC loop"}
+                  {language === "zh" ? "楼宇节能与设备联动" : "Building Energy & Device Linkage"}
                 </a>
               </li>
               <li>
                 <a href="#assessment" className="text-slate-650 dark:text-slate-405 hover:text-[#00E5A3] dark:hover:text-[#00F5A0] transition-colors">
-                  {language === "zh" ? "定制化 ROI 计算评估系统" : "Custom IT ROI Evaluator"}
+                  {language === "zh" ? "AI 场景评估与方案规划" : "AI Scenario Assessment"}
                 </a>
               </li>
             </ul>
@@ -64,7 +64,7 @@ export default function Footer() {
           {/* Column 3: Contact & Base */}
           <div>
             <h4 className="text-xs font-bold text-slate-800 dark:text-slate-200 uppercase tracking-wider mb-4 font-sans">
-              {language === "zh" ? "联络总部 & 示范园区 (HQ)" : "Headquarters"}
+              {language === "zh" ? "联系方式" : "Contact"}
             </h4>
             <div className="space-y-2.5 text-xs text-slate-550 dark:text-slate-400 font-normal leading-relaxed">
               <p>Email: xingyunchuangkeji@outlook.com</p>
@@ -87,8 +87,8 @@ export default function Footer() {
             <span className="font-mono flex items-center gap-1.5 text-slate-505 dark:text-slate-405 font-medium">
               <ShieldAlert className="w-4 h-4 text-[#00E5A3] shrink-0" />
               {language === "zh" 
-                ? "合规验证：完全支持涉密/私有集群物理离线沙箱安全部署" 
-                : "Verified Compliance: Fully compatible with sovereign air-gapped on-premises installations"}
+                ? "支持本地私有化、内网与离线部署场景" 
+                : "Supports private local, intranet, and offline deployment scenarios"}
             </span>
           </div>
 
