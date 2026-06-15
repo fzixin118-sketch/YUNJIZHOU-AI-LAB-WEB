@@ -78,7 +78,7 @@ export default function Hero() {
         >
           {language === "zh" ? (
             <>
-              融合前沿大模型与多维视觉
+              融合前沿大模型与多模态
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00F5A0] via-[#00B2FE] to-[#3B82F6]">
                 打造有活力的企业定制化 AI 引擎
@@ -86,7 +86,7 @@ export default function Hero() {
             </>
           ) : (
             <>
-              Integrating Frontier LLMs & Multimodal Vision
+              Integrating Frontier LLMs & Multimodal AI
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00F5A0] via-[#00B2FE] to-[#3B82F6]">
                 To Forge Active Custom Enterprise AI Engines
